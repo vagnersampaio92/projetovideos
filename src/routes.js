@@ -9,14 +9,20 @@ const SessionControllerAdmin = require('./controllers/SessionControllerAdmin')
 const UsuarioController = require('./controllers/UsuarioController')
 const SessionControllerUsuario = require('./controllers/SessionControllerusuario')
 
+const Exercicios = require ('./controllers/exercicioscontroller')
+
+// store listagem exclui
+
 routes.post('/signupadmin', AdminController.store);
 routes.post('/loginadmin', SessionControllerAdmin.store)
 
 routes.post('/signupusuario', UsuarioController.store);
 routes.post('/loginusuario', SessionControllerUsuario.store)
 
-routes.get('/listagem', UsuarioController.listagem);
-routes.delete('/excluiuser/:id', UsuarioController.exclui);
+routes.post('/cadastraexercicio', Exercicios.store);
+routes.get('/listagemexercic', Exercicios.listagem);
+routes.get('/listagemusuario/:id', Exercicios.listagemusuario);
+routes.delete('/excluiexercicio/:id', Exercicios.exclui);
 
 
 
