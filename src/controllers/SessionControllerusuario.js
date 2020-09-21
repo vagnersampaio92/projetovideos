@@ -1,4 +1,4 @@
-const { User } = require('../app/models')
+const { usuarios } = require('../app/models')
 
 
 class SessionControllerUser{
@@ -8,7 +8,7 @@ class SessionControllerUser{
 
     async store(req, res){
         const { email, password } = req.body
-        const admin = await User.findOne({where: {email}})
+        const admin = await usuarios.findOne({where: {email}})
         if(!admin){
             console.log('usuário não encontrado')
             const codigo = 404

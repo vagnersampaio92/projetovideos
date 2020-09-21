@@ -16,6 +16,7 @@ routes.post('/signupusuario', UsuarioController.store);
 routes.post('/loginusuario', SessionControllerUsuario.store)
 
 routes.get('/listagem', UsuarioController.listagem);
+routes.delete('/excluiuser/:id', UsuarioController.exclui);
 
 
 

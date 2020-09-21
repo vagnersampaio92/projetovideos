@@ -12,7 +12,14 @@ class UserController{
         const user = await usuarios.findAll()
         res.json(user);
     }
-
+    async exclui(req, res){
+        const avaliacao =await usuarios.destroy(
+           {where:{
+             id:req.params.id
+           }}
+         )
+        res.json(avaliacao);
+    }
 
 }
 
