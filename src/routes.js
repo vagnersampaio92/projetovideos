@@ -15,6 +15,9 @@ routes.post('/loginadmin', SessionControllerAdmin.store)
 routes.post('/signupusuario', UsuarioController.store);
 routes.post('/loginusuario', SessionControllerUsuario.store)
 
+routes.get('/listagem', UsuarioController.listagem);
+
+
 
 routes.use(auth)
 

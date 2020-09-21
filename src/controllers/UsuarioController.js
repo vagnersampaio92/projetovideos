@@ -4,9 +4,15 @@ class UserController{
 
     async store (req, res){
       
-        const admin = await usuarios.create(req.body)
-        res.json(admin);
+        const user = await usuarios.create(req.body)
+        res.json(user);
     }
+    async listagem (req, res){
+      
+        const user = await usuarios.findAll()
+        res.json(user);
+    }
+
 
 }
 
