@@ -2,9 +2,9 @@ const bcrypt = require('bcryptjs')
 const  jwt=require ('jsonwebtoken')
 
 
-mondule.exports = (sequelize, DataTypes) =>{
 
-    const Admin = sequelize.define('admins',{
+module.exports = (sequelize, DataTypes) => {
+    const Admin = sequelize.define('Admin',{
         name:DataTypes.STRING,
         email:DataTypes.STRING,
         password:DataTypes.VIRTUAL,
